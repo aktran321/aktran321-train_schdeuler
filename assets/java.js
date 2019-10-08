@@ -62,7 +62,7 @@
         var currentTime = moment();
   
         //Very first trip
-        var timeFirstTrain = moment(snapshot.val().train[key].first_time,"MM/DD/YYYY HH:mm");
+        var timeFirstTrain = moment(snapshot.val().train[key].first_flight_time,"MM/DD/YYYY HH:mm");
 
         //This takes the difference in time between now and the very first train in minutes...
         var diffMinutesTrains = currentTime.diff(timeFirstTrain,'minutes');
@@ -87,6 +87,11 @@
         masterRow.append(initialArrival);
         masterRow.append(initialMinutesAway);
         $("#train-info").append(masterRow);
+   console.log(currentTime);
+   console.log(timeFirstTrain);
+   console.log(diffMinutesTrain);
+   console.log(timeRemaining);
+   console.log(nextArrival);
    
       }
   }, function(errorObject) {
