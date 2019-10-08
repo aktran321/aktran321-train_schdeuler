@@ -5,14 +5,59 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        
+         <!-- Moment library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     </head>
     <body>
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1>Local Train Times</h1>
+            </div>
+            <div class="badge-primary">
+                    Current Train Schdeule
+                </div>
+                <div class="border mb-3 border-primary">
+                    <table class="table responsive-responsive">
+                            <thead class="train-input">
+                                    <tr>
+                                    </tr>
+                            </thead>
+                            <tbody id="train-info">
+                                    
+                            </tbody>
+                        </table>
+                </div>
+        <div>
+            
+            <form class="mb-2 border border-primary">
+                
+                <div class="badge-primary">
+                    Add Train
+                </div>
+                <div class="m-3">
+                    <label for="name-input">Train Name</label>
+                    <input type="text" class="form-control" id="name-input" placeholder="New Train Here">
+                    <label for="destination-input">Destination</label>
+                    <input type="text" class="form-control" id="destination-input" placeholder="New Train Here">
+                    <label for="time-input">First Train Time (HH:mm Military Time)</label>
+                    <input type="text" class="form-control" id="time-input" placeholder="New Train Here">
+                    <label for="frequency-input">Frequency (min)</label>
+                    <input type="text" class="form-control" id="frequency-input" placeholder="New Train Here">
+                    <button id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
+                </div>
+                   
+            </div>
+            </form>
+        </div>
+    </div>
+                <!-- The core Firebase JS SDK is always required and must be listed first -->
+                <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+
             <!--JQuery script tag at the bottom but before the javascript links-->
             <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <!--Script Tags for Javascript-->
             <script  src="assets/java.js"></script>
-            <script  src="assets/moment.js"></script>
             <!--Css link tags-->
             <link rel="stylesheet" href="assets/style.css">
     </body>
